@@ -1,0 +1,13 @@
+
+.inputmain {
+    @apply p-1 w-1/4 flex
+ }
+ .label {
+     @apply grid col-span-2 bg-slate-300 text-center p-1 rounded-sm mx-2
+ }
+ .input {
+     @apply rounded-sm p-0 border-second border
+ }
+ 
+ 
+ 
