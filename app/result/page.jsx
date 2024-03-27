@@ -70,8 +70,8 @@ return (
                                 onChange={(e)=>setData({...data, status:e.target.value})}
                                 >
                                                 <option value="">--Select--</option>
-                                                <option className="text-green-500 font-bold" value="Extra Drill"> Pass</option>
-                                                <option className="text-red-500 font-bold" value="Detained"> Fail </option>
+                                                <option className="text-green-500 font-bold" value="Pass"> Pass</option>
+                                                <option className="text-red-500 font-bold" value="Fail"> Fail </option>
                                                 
                                         </select>
 
