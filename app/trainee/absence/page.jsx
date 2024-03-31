@@ -19,14 +19,16 @@ const [data, setData] = useState(defaults)
 const [ReceivedItemArray, setArray] = useState([]);
 
 function add () {
-        if(data.tid === ''){ 
-                const element = document.getElementById('tid');
-                // element.style.background='red' || parseInt(data.punishment) > 0
-                element.style.border='red'
-                alert("Please Enter Trainee ID")}
-                else if (data.startDate === '' ) {alert("Please Enter start Date")}
-                else if (data.endDate === '' ) {alert("Please Enter end Date")}
-                else if (data.days === ''|| parseInt(data.days) < 1) {alert("Please enter days" + parseInt(data.punishment))}
+        if(data.traineeId === ''){ alert("Please Enter Trainee ID")}
+                else if (data.startDate === '' ) {alert("Please enter Start Date")}
+                else if (data.endDate === ''  || data.endDate  <= data.startDate) {
+                        var st = new Date(data.startDate)
+                        var end = new Date(data.endDate)
+                        var diff = st -end
+                        var res = Math.round(diff /(1000*3600*24))
+                       
+                        alert("Please enter end Date or Date should not be less then or equal to start Date")}
+                else if (data.days === ''|| parseInt(data.days) < 1) {alert("Please enter days")}
                 else if (data.reason === '') {alert("Please enter reason")}
                 
                         else {
@@ -77,6 +79,7 @@ return (
                                 <input type="number" name="" id="days" className='h-10 border-b shadow-sm shadow-black rounded-sm pl-2' 
                                 value={data.days}
                                 onChange={(e)=>setData({...data, days:e.target.value})} 
+                                
                                 />
                         
                                 <label htmlFor="reason">Reason*</label>
@@ -97,9 +100,7 @@ return (
                                         <input type="submit" value="Add Absence record" className='h-10 border-b shadow-sm  rounded-sm bg-slate-700 text-white p-2 cursor-pointer hover:bg-slate-200 hover:text-black' onClick={() => add()}/>
                                         </div>
                         </div>
-                        <div className='flex flex-row w-4/12 bg-slate-300 rounded-tr-md'>
-                                <h2>Selected Trainee Information</h2>
-                        </div>
+                        
                 </div>
                 
                 

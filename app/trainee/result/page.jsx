@@ -20,10 +20,7 @@ const [data, setData] = useState(defaults)
 const [ReceivedItemArray, setArray] = useState([]);
 
 function add () {
-        if(data.tid === ''){ 
-                const element = document.getElementById('tid');
-                // element.style.background='red' || parseInt(data.punishment) > 0
-                element.style.border='red'
+        if(data.traineeId === ''){
                 alert("Please Enter Trainee ID")}
                 else if (data.status === '' ) {alert("Please select Punishment")}
                 else if (data.obMarks == '') {alert("Please Obtained Marks")}
