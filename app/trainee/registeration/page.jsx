@@ -142,27 +142,54 @@ return (
                         
                         
  <div className='flex flex-col w-6/12 bg-slate-50 rounded-tr-md px-14'>
-                                <h2>Selected Trainee Information</h2>
+                               
                                 <label htmlFor="">Rank*</label>
-                                <input type="text" name="" id="" className='h-10 border-b shadow-sm shadow-black rounded-sm pl-2' 
+                                
+
+<select name="" id="" className='h-10 border-b shadow-sm shadow-black rounded-sm pl-2'
                                 value={data.tRank}
-                                onChange={(e)=>setData({...data, tRank:e.target.value})}/>
+                                onChange={(e)=>setData({...data, tRank:e.target.value})}
+                                >
+                                                <option value="">--Select--</option>
+                                                
+                                                <option  value="UT"> UT </option>
+                                                <option  value="Probationer"> Probationer </option>
+                                                <option  value="C/JPO "> C/JPO </option>
+                                                <option  value="HC/APO"> HC/APO </option>
+                                                <option  value="SI/PO"> SI/PO </option>
+                                                <option  value="IP/SPO"> IP/SPO </option>
+                                                <option  value="CPO/DSP"> CPO/DSP </option>
+                                                
+                                                
+                                        </select>
 
                                 <label htmlFor="">Belt No.*</label>
                                 <input type="text" name="" id="" className='h-10 border-b shadow-sm shadow-black rounded-sm pl-2' 
                                 value={data.tBeltno}
                                 onChange={(e)=>setData({...data, tBeltno:e.target.value})}/>
-                                <label htmlFor="">Driving license*</label>
-                                <input type="text" name="" id="" className='h-10 border-b shadow-sm shadow-black rounded-sm pl-2' 
-                                value={data.tDL}
-                                onChange={(e)=>setData({...data, tDL:e.target.value})}/> 
+                                <label htmlFor="">Driving License*</label>
+                                
 
-                                 <label htmlFor="">Driving license No.*</label>
+<select name="" id="" className='h-10 border-b shadow-sm shadow-black rounded-sm pl-2'
+                                value={data.tDL}
+                                onChange={(e)=>setData({...data, tDL:e.target.value})}
+                                >
+                                                <option value="">--Select--</option>
+                                                
+                                                <option  value="Yes"> Yes </option>
+                                                <option  value="No"> No </option>
+                                                </select>
+                                                
+
+                                 <label htmlFor="">Driving License No.*</label>
                                 <input type="text" name="" id="" className='h-10 border-b shadow-sm shadow-black rounded-sm pl-2' 
                                 value={data.tDLno}
                                 onChange={(e)=>setData({...data, tDLno:e.target.value})}/>
 
-                                 <label htmlFor="">Driving license issuing Authority.*</label>
+
+                                                        
+
+                                 <label htmlFor="">Driving License issuing Authority.*</label>
                                 <input type="text" name="" id="" className='h-10 border-b shadow-sm shadow-black rounded-sm pl-2' 
                                 value={data.tDLissuedBy}
                                 onChange={(e)=>setData({...data, tDLissuedBy:e.target.value})}/>
@@ -198,10 +225,16 @@ return (
                                 onChange={(e)=>setData({...data, tExp:e.target.value})}/>
 
 <label htmlFor="">Religion.*</label>
-                                <input type="text" name="" id="" className='h-10 border-b shadow-sm shadow-black rounded-sm pl-2' 
+                        <select name="" id="" className='h-10 border-b shadow-sm shadow-black rounded-sm pl-2'
                                 value={data.tReligion}
-                                onChange={(e)=>setData({...data, tReligion:e.target.value})}/>
-
+                                onChange={(e)=>setData({...data, tReligion:e.target.value})}
+                                >
+                                <option value="">--Select--</option>
+                                <option  value="Muslim"> Muslim </option>
+                                 <option  value="Christian"> Christian </option>
+                                 <option  value="Sikh"> Sikh </option>
+                                <option  value="Hindu"> Hindu </option>
+                                 </select>
                                 <label htmlFor="">Posting Zone / Office*</label>
                                 <select name="" id="" className='h-10 border-b shadow-sm shadow-black rounded-sm pl-2'
                                 value={data.tPosting}
