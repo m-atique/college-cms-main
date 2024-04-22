@@ -20,7 +20,7 @@ const DataStore = ({ children }) => {
   const [sections, setSections] = useState([]);
   const [spUnits, setSpUnits] = useState([]);
   const [session, setSession] = useState([]);
-  const [base_url, setBase_url] = useState("http://localhost:5010");
+  const [base_url, setBase_url] = useState("http://192.168.1.4:5000");
   // Fetch classes data
   useEffect(() => {
     const fetchClasses = async () => {

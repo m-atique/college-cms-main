@@ -1,35 +1,19 @@
 'use client'
-import axios from "axios"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
+import Image from 'next/image';
+import {React} from 'react'
+import Link from 'next/link';
+// import Logo from '../img/logo.png'
 
+
+const Dashboard = () => {
   
 
-export default function Home() {
 
-  return (
+   return (
     <div>
           <div className='border w-screen h-screen'> {/* bg screen */}
-              <div className='border  w-11/12 h-full m-auto flex fex-row'>
-                <div className='  border-r-2 bg-slate-700 w-3/12 h-full bg-gradient-to-b from-slate-600  to-blue-300 '>
-                <div className=' rounded-full w-4/12 h-26 m-auto mt-4 bg-blue-900 p-2 border-2 border-yellow-500 '>
-                     {/* <image src={Logo} height={80} width={100}/> */}
-                     {/* <Image src={Logo} className=''/> */}
-                  </div>
-                 
-                  <div className=' w-full m-auto'>
-                      <ul>
-                     
-                            <li className='pl-5 bg-slate-200  mb-1 mt-2 hover:bg-white cursor-pointer  border-indigo-500'>
-                              Add Product
-                            </li>
-                            <li className='pl-5 bg-slate-200  mb-1 hover:bg-white cursor-pointer  border-indigo-500'>
-                              <Link href="">View Products</Link>
-                              </li>
-                            
-                      </ul>
-                  </div>
-                </div> 
+              <div className='border  w-full h-full m-auto justify-center flex fex-row'>
+               
                 {/* Header Area */}
                  <div className='bg-gradient-to-b from-slate-200  to-gray-100 w-9/12 h-full'>
                     <div className=' justify-center items-center  to-slate-100 w-full  flex flex-row mb-1 h-1/6'>
@@ -98,11 +82,7 @@ export default function Home() {
           </div>
 
     </div>
-
   )
 }
 
-
-
-
-
+export default Dashboard

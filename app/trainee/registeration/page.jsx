@@ -1,7 +1,9 @@
 'use client'
 import React, {useState} from 'react'
-
+import Image from 'next/image';
+import profile from '../img/profile-pic.jpeg'
 import axios from 'axios';
+
 const Register = ()=>{
 
 const defaults= {
@@ -19,7 +21,9 @@ const defaults= {
         tEmgcontact:"",
         tRelation:"",
         tBeltno:"",
+        tPic:"",
         tRank:"",
+        tCourse:"",
         tDL:"",
         tDLno:"",
         tDLissuedBy:"",
@@ -72,7 +76,7 @@ return (
                </div>
                 
                 <div className='flex flex-row w-full '>
-                        <div className='flex flex-col  border-r-4  border-blue-900 w-6/12  bg-slate-50 px-28 py-5 rounded-tl-md'>
+                        <div className='flex flex-col  border-r-2  border-blue-900 w-6/12  bg-slate-50 px-28 py-5 rounded-tl-md'>
                                 <label htmlFor="">Enter Trainee ID*</label>
                                 <input type="text" name="" id="" className='h-10 border-b shadow-sm shadow-black rounded-sm pl-2' 
                                 value={data.traineeId}
@@ -124,7 +128,7 @@ return (
                                 <input type="text" name="" id="" className='h-10 border-b shadow-sm shadow-black rounded-sm pl-2' 
                                 value={data.tCA}
                                 onChange={(e)=>setData({...data, tCA:e.target.value})}/>  
-<label htmlFor="">Tainee Contact No.*</label>
+<label htmlFor="">Trainee Contact No.*</label>
                                 <input type="text" name="" id="" className='h-10 border-b shadow-sm shadow-black rounded-sm pl-2' 
                                 value={data.tContact}
                                 onChange={(e)=>setData({...data, tContact:e.target.value})}/>        
@@ -142,9 +146,18 @@ return (
                         
                         
  <div className='flex flex-col w-6/12 bg-slate-50 rounded-tr-md px-14'>
-                               
+
+        <div className='flex mt-2 align-middle justify-center'>
+                <Image src={profile} />
+        </div>  
+
+<label>Add Profile Pricute</label>
+<input type="file" src="" alt="" className='h-10 border-b shadow-sm shadow-black rounded-sm pl-2' 
+                                value={data.tPic}
+                                onChange={(e)=>setData({...data, tPic:e.target.value})}/>
+
+                              
                                 <label htmlFor="">Rank*</label>
-                                
 
 <select name="" id="" className='h-10 border-b shadow-sm shadow-black rounded-sm pl-2'
                                 value={data.tRank}
@@ -152,8 +165,6 @@ return (
                                 >
                                                 <option value="">--Select--</option>
                                                 
-                                                <option  value="UT"> UT </option>
-                                                <option  value="Probationer"> Probationer </option>
                                                 <option  value="C/JPO "> C/JPO </option>
                                                 <option  value="HC/APO"> HC/APO </option>
                                                 <option  value="SI/PO"> SI/PO </option>
@@ -162,6 +173,25 @@ return (
                                                 
                                                 
                                         </select>
+                                        <label htmlFor="">Course*</label>
+
+<select name="" id="" className='h-10 border-b shadow-sm shadow-black rounded-sm pl-2'
+                                value={data.tCourse}
+                                onChange={(e)=>setData({...data, tCourse:e.target.value})}
+                                >
+                                                <option value="">--Select--</option>
+                                                
+                                                <option  value="Advance Class Course "> Advance Class Course </option>
+                                                <option  value="Upper Class Course "> Upper Class Course </option>
+                                                <option  value="Intermediate Class Course"> Intermediate Class Course </option>
+                                                <option  value="Lower Class Course"> Lower Class Course </option>
+                                                <option  value="Probationer"> Probationer / PO </option>
+                                                <option  value="Probationer"> Probationer / SAPO </option>
+                                                <option  value="Basic Recruite Course"> Basic Recruite Course </option>
+                                                
+                                                
+                                        </select>
+
 
                                 <label htmlFor="">Belt No.*</label>
                                 <input type="text" name="" id="" className='h-10 border-b shadow-sm shadow-black rounded-sm pl-2' 
