@@ -3,8 +3,9 @@
    @apply p-1 w-1/4 flex
 }
 .label {
-    @apply grid col-span-2 bg-slate-300 text-center p-1 rounded-sm mx-2
+    @apply font-semibold
 }
+
 .input {
     @apply rounded-sm  px-2 border-second border
 }
